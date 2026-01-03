@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "./Project";
+import Skills from "./Skill";
 
 const Hero = () => {
   return (
@@ -81,6 +82,7 @@ const Hero = () => {
       </div>
       <div>
         <Project />
+        <Skills />
       </div>
     </section>
   );

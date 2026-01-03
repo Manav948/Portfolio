@@ -4,6 +4,7 @@ import Hero from "../component/Hero";
 import Footer from "../component/Footer";
 import MouseFollowCard from "../component/ui/MouseHower";
 import Project from "../component/Project";
+import Skills from "../component/Skill";
 
 const Home = () => {
   return (

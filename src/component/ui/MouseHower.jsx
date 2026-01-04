@@ -2,6 +2,8 @@
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import Hero from "../Hero";
+import About from "../About";
+import Connect from "../Connect";
 
 const SPRING = {
   mass: 0.1,
@@ -44,6 +46,8 @@ const MouseFollowCard = () => {
         "
       />
       <Hero />
+      <About />
+      <Connect />
     </div>
   );
 };

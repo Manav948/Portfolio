@@ -1,26 +1,23 @@
 import React from "react";
 import { Header } from "../component/Header";
-import Hero from "../component/Hero";
 import Footer from "../component/Footer";
 import MouseFollowCard from "../component/ui/MouseHower";
-import Project from "../component/Project";
-import Skills from "../component/Skill";
+import ScrollView from "../component/ui/ScrollView";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-black text-[#EDEFF4]">
-      <Header />
-      <main className="pt-32">
-        <section className="mx-auto max-w-6xl">
-          <div className="justify-center">
+    <ScrollView>
+      <div className="min-h-screen bg-black text-[#EDEFF4] overflow-hidden">
+        <Header />
+        <main className="pt-32">
+          <div className="mx-auto max-w-6xl px-6 py-32">
             <MouseFollowCard />
           </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </ScrollView>
   );
 };
 
 export default Home;
-

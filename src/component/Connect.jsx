@@ -1,109 +1,77 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const floatingSkills = [
-  { label: "React.js", x: -120, y: -80 },
-  { label: "Next.js", x: 140, y: -60 },
-  { label: "TypeScript", x: -160, y: 90 },
-  { label: "JavaScript", x: 160, y: 110 },
-  { label: "Tailwind", x: 0, y: -130 },
-  { label: "MongoDB", x: 0, y: 150 },
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "MongoDB",
 ];
-
-const floatAnimation = {
-  animate: {
-    y: [0, -10, 0],
-    x: [0, 6, 0],
-  },
-  transition: {
-    duration: 6,
-    repeat: Infinity,
-    ease: "easeInOut",
-  },
-};
 
 const Connect = () => {
   return (
-    <section className="relative bg-black py-40 text-white overflow-hidden">
-      
-      {/* Ambient moving glow */}
-      <motion.div
-        className="pointer-events-none absolute left-1/4 top-1/3 h-96 w-96 rounded-full bg-purple-500/20 blur-[160px]"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="pointer-events-none absolute right-1/4 bottom-1/3 h-96 w-96 rounded-full bg-cyan-500/20 blur-[160px]"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      />
+    <section className="relative bg-black py-24 md:py-40 text-white">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="relative mx-auto max-w-3xl rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 sm:p-10 md:p-16 text-center shadow-[0_30px_80px_-40px_rgba(0,0,0,0.8)] overflow-hidden">
+          
+          {/* Glow background */}
+          <div className="pointer-events-none absolute inset-0 z-0">
+            <div className="absolute left-1/4 top-10 h-72 w-72 rounded-full bg-pink-500/25 blur-[140px]" />
+            <div className="absolute right-1/4 bottom-10 h-72 w-72 rounded-full bg-purple-500/25 blur-[140px]" />
+          </div>
 
-      <div className="mx-auto max-w-5xl px-6 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="relative mx-auto max-w-3xl rounded-3xl
-          border border-white/10 bg-white/5 backdrop-blur-xl
-          p-12 text-center
-          shadow-[0_30px_80px_-40px_rgba(0,0,0,0.8)]"
-        >
-
-          {/* Floating skill pills */}
+          {/* Floating skills (desktop only) */}
           {floatingSkills.map((skill, i) => (
-            <motion.span
-              key={skill.label}
-              className="absolute hidden md:block
-              rounded-full bg-black/70 px-3 py-1 text-xs
-              text-[#9AA3B2] border border-white/10"
-              style={{
-                left: "50%",
-                top: "50%",
-                transform: `translate(${skill.x}px, ${skill.y}px)`,
-              }}
-              {...floatAnimation}
+            <span
+              key={skill}
+              className={`
+                absolute hidden md:block
+                rounded-full bg-black/70 px-3 py-1 text-xs text-[#9AA3B2]
+                border border-white/10
+                ${i === 0 && "left-6 top-6"}
+                ${i === 1 && "right-6 top-10"}
+                ${i === 2 && "left-10 bottom-8"}
+                ${i === 3 && "right-12 bottom-6"}
+                ${i === 4 && "left-1/2 top-3 -translate-x-1/2"}
+              `}
             >
-              {skill.label}
-            </motion.span>
+              {skill}
+            </span>
           ))}
 
-          {/* Identity badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-            className="mb-6 inline-flex items-center gap-2
-            rounded-full bg-red-500/10 px-4 py-1
-            text-sm text-red-400"
-          >
-            <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
+          {/* Badge */}
+          <div className="relative z-10 mb-6 inline-flex items-center gap-2 rounded-full bg-red-500/10 px-4 py-1 text-xs sm:text-sm text-red-400">
+            <span className="h-2 w-2 rounded-full bg-red-500" />
             Manav Valani
-          </motion.div>
+          </div>
 
           {/* Heading */}
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="relative z-10 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
             Opportunities to collaborate?
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#9AA3B2]">
+          <p className="relative z-10 mx-auto mt-4 max-w-xl text-sm sm:text-base leading-relaxed text-[#9AA3B2]">
             Feel free to reach out to me. I’m always open to discussing new
             projects, creative ideas, or collaboration opportunities.
           </p>
 
           {/* CTA */}
-          <motion.a
-            href="mailto:valanimanav61@gmail.com"
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 inline-flex items-center justify-center
-            rounded-full bg-red-500 px-6 py-3
-            text-sm font-medium text-white"
-          >
-            valanimanav61@gmail.com
-          </motion.a>
-        </motion.div>
+          <div className="relative z-10 mt-8">
+            <a
+              href="mailto:valanimanav61@gmail.com"
+              className="
+                inline-flex items-center justify-center
+                rounded-full bg-red-500 px-6 py-3
+                text-sm font-medium text-white
+                transition-transform duration-300
+                hover:scale-105
+              "
+            >
+              valanimanav61@gmail.com
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

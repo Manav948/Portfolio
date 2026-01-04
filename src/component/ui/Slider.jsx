@@ -18,8 +18,8 @@ const Slider = () => {
 
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute left-24 top-40 h-105 w-105 rounded-full bg-cyan-500/20 blur-[120px]" />
-        <div className="absolute right-24 bottom-32 h-105 w-105 rounded-full bg-purple-500/20 blur-[120px]" />
+        <div className="absolute left-24 top-40 h-105 w-105 rounded-full bg-pink-500/20 blur-[100px]" />
+        <div className="absolute right-24 bottom-32 h-105 w-105 rounded-full bg-blue-500/20 blur-[100px]" />
       </div>
 
       {/* Line 1 */}

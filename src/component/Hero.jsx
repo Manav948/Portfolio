@@ -53,7 +53,6 @@ const Hero = () => {
     >
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-24 top-40 h-105 w-105 rounded-full bg-cyan-500/25 blur-[120px]" />
-        <div className="absolute right-24 bottom-32 h-105 w-105 rounded-full bg-red-500/25 blur-[120px]" />
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-20 md:grid-cols-2">
@@ -139,8 +138,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="py-50">
         <Project />
+      </div>
+      <div className="py-30">
         <Slider />
       </div>
     </section>

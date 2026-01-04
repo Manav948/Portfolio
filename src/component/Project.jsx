@@ -39,7 +39,7 @@ const Project = () => {
   return (
     <section className="relative py-32">
       {/* Ambient lights */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/4 top-20 h-105 w-105 rounded-full bg-purple-500/20 blur-[160px]" />
         <div className="absolute right-1/4 bottom-20 h-105 w-105 rounded-full bg-cyan-500/20 blur-[160px]" />
       </div>

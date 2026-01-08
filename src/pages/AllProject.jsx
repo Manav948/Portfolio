@@ -50,10 +50,11 @@ const projects = [
   },
   {
     img: "/todo.png",
-    title: "Todo App",
+    title: "Think Board",
     description:
       "A full-stack task manager where users can create, track, and manage daily tasks.",
     tech: ["MongoDB", "Tailwind", "React", "Node", "Express"],
+    link: "https://think-board-lsdj.vercel.app/",
   },
 ];
 

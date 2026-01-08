@@ -49,7 +49,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden px-6"
+      className="relative min-h-screen overflow-hidden"
     >
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-24 top-40 h-105 w-105 rounded-full bg-cyan-500/25 blur-[120px]" />

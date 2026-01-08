@@ -37,14 +37,14 @@ const projects = [
 
 const Project = () => {
   return (
-    <section className="relative py-32">
+    <section className="relative md:py-32 py-20">
       {/* Ambient lights */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/4 top-20 h-105 w-105 rounded-full bg-purple-500/20 blur-[160px]" />
         <div className="absolute right-1/4 bottom-20 h-105 w-105 rounded-full bg-cyan-500/20 blur-[160px]" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 max-w-xl">
           <h2 className="text-3xl font-bold">Selected Projects</h2>
@@ -54,7 +54,7 @@ const Project = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -67,7 +67,7 @@ const Project = () => {
               {/* Image */}
               <div
                 onClick={() => project.link && window.open(project.link, "_blank")}
-                className="relative h-60 cursor-pointer overflow-hidden"
+                className="relative md:h-60 h-48 cursor-pointer overflow-hidden"
               >
                 <img
                   src={project.img}
@@ -78,7 +78,7 @@ const Project = () => {
                 <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
 
-              <div className="p-8">
+              <div className="md:p-8 p-5">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
 
                 <p className="mt-3 text-sm text-[#9AA3B2] leading-relaxed">

@@ -10,7 +10,7 @@ const Home = () => {
       <div className="min-h-screen bg-black text-[#EDEFF4] overflow-hidden">
         <Header />
         <main className="pt-32">
-          <div className="mx-auto max-w-6xl px-6 py-32">
+          <div className="mx-auto max-w-7xl py-32">
             <MouseFollowCard />
           </div>
         </main>

@@ -4,6 +4,20 @@ import Footer from "../component/Footer";
 
 const projects = [
   {
+    img: "/draftly.png",
+    title: "Draftly",
+    description:
+      "A modern workspace for tasks, mind maps, and productivity-focused workflows.",
+    tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "TipTap", "Supabase", "Prisma","React-tanstack-query"],
+  },
+  {
+    img: "/feedbackly.png",
+    title: "FeedBackly",
+    description:
+      "A Next.js-based application allowing users to receive anonymous feedback via shareable links.",
+    tech: ["Next.js", "Tailwind", "React", "Lenis", "MongoDB"],
+  },
+  {
     img: "/imegino.png",
     title: "Imagino",
     description:
@@ -28,25 +42,12 @@ const projects = [
     link: "https://sun-down-studio-omega.vercel.app",
   },
   {
-    img: "/draftly.png",
-    title: "Draftly",
-    description:
-      "A modern workspace for tasks, mind maps, and productivity-focused workflows.",
-    tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "TipTap"],
-  },
-  {
-    img: "/feedbackly.png",
-    title: "FeedBackly",
-    description:
-      "A Next.js-based application allowing users to receive anonymous feedback via shareable links.",
-    tech: ["Next.js", "Tailwind", "React", "Lenis", "MongoDB"],
-  },
-  {
     img: "/Ai-assistant.png",
     title: "AI Assistant",
     description:
       "A full-stack AI-powered voice assistant built with modern backend and AI APIs.",
     tech: ["MongoDB", "Tailwind", "React", "Node", "Express", "Gemini API"],
+    link: "https://ai-assistant-neon-one.vercel.app/"
   },
   {
     img: "/todo.png",
@@ -56,11 +57,12 @@ const projects = [
     tech: ["MongoDB", "Tailwind", "React", "Node", "Express"],
     link: "https://think-board-lsdj.vercel.app/",
   },
+
 ];
 
 const AllProject = () => {
   return (
-    <ScrollView>  
+    <ScrollView>
       <section className="relative min-h-screen bg-black py-32 text-white overflow-hidden">
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute left-1/4 top-40 h-96 w-96 rounded-full bg-purple-500/20 blur-[160px]" />

@@ -9,13 +9,15 @@ const projects = [
     description:
       "A modern workspace for tasks, mind maps, and productivity-focused workflows.",
     tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "TipTap", "Supabase", "Prisma","React-tanstack-query"],
+    link : "https://draftly-three.vercel.app/en"
   },
   {
-    img: "/feedbackly.png",
+    img: "/FeedBackly.png",
     title: "FeedBackly",
     description:
       "A Next.js-based application allowing users to receive anonymous feedback via shareable links.",
     tech: ["Next.js", "Tailwind", "React", "Lenis", "MongoDB"],
+    link : "https://feedbackly-seven.vercel.app/"
   },
   {
     img: "/imegino.png",

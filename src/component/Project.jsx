@@ -32,6 +32,7 @@ const projects = [
     description:
       "A modern workspace for tasks, mind maps, and productivity-focused workflows.",
     tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "TipTap"],
+    link : "https://draftly-three.vercel.app/en"
   },
 ];
 

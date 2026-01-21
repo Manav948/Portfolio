@@ -44,7 +44,7 @@ const projects = [
     link: "https://sun-down-studio-omega.vercel.app",
   },
   {
-    img: "/Ai-assistant.png",
+    img: "/Assitant.png",
     title: "AI Assistant",
     description:
       "A full-stack AI-powered voice assistant built with modern backend and AI APIs.",
@@ -58,6 +58,13 @@ const projects = [
       "A full-stack task manager where users can create, track, and manage daily tasks.",
     tech: ["MongoDB", "Tailwind", "React", "Node", "Express"],
     link: "https://think-board-lsdj.vercel.app/",
+  },
+    {
+    img: "/MovieHub.png",
+    title: "MovieHub",
+    description:"MovieHub built using React and Vite. It allows users to browse, search, and view details about various movies.",
+    tech: ["Tailwind", "React", "Framer-motion"],
+    link: "https://movie-hub-lac-psi.vercel.app/",
   },
 
 ];

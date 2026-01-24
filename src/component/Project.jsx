@@ -3,6 +3,22 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    img: "/draftly.png",
+    title: "Draftly",
+    description:
+      "A modern workspace for tasks, mind maps, and productivity-focused workflows.",
+    tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "TipTap"],
+    link: "https://draftly-three.vercel.app/en"
+  },
+  {
+    img: "/FeedBackly.png",
+    title: "FeedBackly",
+    description:
+      "A Next.js-based application allowing users to receive anonymous feedback via shareable links.",
+    tech: ["Next.js", "Tailwind", "React", "Lenis", "MongoDB"],
+    link: "https://feedbackly-seven.vercel.app/"
+  },
+  {
     img: "/imegino.png",
     title: "Imagino",
     description:
@@ -11,42 +27,27 @@ const projects = [
     link: "https://imagino-dun.vercel.app",
   },
   {
-    img: "/rejouice.png",
-    title: "Rejouice",
+    img: "/Assitant.png",
+    title: "AI Assistant",
     description:
-      "A front-end clone of the Rejouice website focusing on creative layouts and smooth animations.",
-    tech: ["React", "Framer Motion", "GSAP", "Locomotive", "Lenis"],
-    link: "https://rejouice-clone-six.vercel.app",
+      "A full-stack AI-powered voice assistant built with modern backend and AI APIs.",
+    tech: ["MongoDB", "Tailwind", "React", "Node", "Express", "Gemini API"],
+    link: "https://ai-assistant-neon-one.vercel.app/"
   },
-  {
-    img: "/sundown-studio.png",
-    title: "SunDown Studio",
-    description:
-      "A motion-focused front-end clone showcasing smooth scrolling and elegant interactions.",
-    tech: ["React", "Tailwind", "Framer Motion", "Lenis"],
-    link: "https://sun-down-studio-omega.vercel.app",
-  },
-  {
-    img: "/draftly.png",
-    title: "Draftly",
-    description:
-      "A modern workspace for tasks, mind maps, and productivity-focused workflows.",
-    tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "TipTap"],
-    link : "https://draftly-three.vercel.app/en"
-  },
+
 ];
 
 const Project = () => {
   return (
     <section className="relative md:py-32 py-20">
-      {/* Ambient lights */}
+
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/4 top-20 h-105 w-105 rounded-full bg-purple-500/20 blur-[160px]" />
         <div className="absolute right-1/4 bottom-20 h-105 w-105 rounded-full bg-cyan-500/20 blur-[160px]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6">
-        {/* Header */}
+
         <div className="mb-16 max-w-xl">
           <h2 className="text-3xl font-bold">Selected Projects</h2>
           <p className="mt-3 text-[#9AA3B2]">
@@ -54,7 +55,7 @@ const Project = () => {
           </p>
         </div>
 
-        {/* Grid */}
+
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
@@ -63,12 +64,13 @@ const Project = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0F1117]/80 backdrop-blur"
+              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#0F1117]/30 backdrop-blur p-5 transition-all duration-300 hover:border-white/20
+              shadow"
             >
-              {/* Image */}
+
               <div
                 onClick={() => project.link && window.open(project.link, "_blank")}
-                className="relative md:h-60 h-48 cursor-pointer overflow-hidden"
+                className="relative cursor-pointer overflow-hidden rounded-2xl"
               >
                 <img
                   src={project.img}

@@ -52,7 +52,7 @@ const projects = [
     link: "https://ai-assistant-neon-one.vercel.app/"
   },
   {
-    img: "/todo.png",
+    img: "/ThinkBoard.png",
     title: "Think Board",
     description:
       "A full-stack task manager where users can create, track, and manage daily tasks.",
@@ -79,7 +79,7 @@ const AllProject = () => {
         </div>
 
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-20 max-w-2xl">
+          <div className="max-w-2xl">
             <h1 className="text-4xl font-semibold tracking-tight">
               All Projects
             </h1>
@@ -89,7 +89,7 @@ const AllProject = () => {
             </p>
           </div>
 
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2 mt-25">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -102,7 +102,7 @@ const AllProject = () => {
                 shadow
 
               "
-              >
+              > 
                 {/* Image */}
                 <div className="mb-5 overflow-hidden rounded-xl">
                   <img

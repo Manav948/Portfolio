@@ -12,7 +12,7 @@ const projects = [
     link : "https://draftly-three.vercel.app/en"
   },
   {
-    img: "/FeedBackly.png",
+    img: "/FeedBackly2.png",
     title: "FeedBackly",
     description:
       "A Next.js-based application allowing users to receive anonymous feedback via shareable links.",

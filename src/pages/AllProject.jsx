@@ -12,6 +12,14 @@ const projects = [
     link : "https://draftly-three.vercel.app/en"
   },
   {
+    img: "/codeVerse.png",
+    title: "CodeVerse",
+    description:
+      "CodeVerse is a developer-focused platform to publish posts, manage coding tasks, store reusable code snippets, and build a public learning journey in one unified ecosystem.",
+    tech: ["Next.js", "Tailwind", "Shadcn UI", "Framer Motion", "PostGress", "Supabase", "Prisma","React-tanstack-query" , "lenis"],
+    link : "https://codeverse.manavvalani.in/"
+  },
+  {
     img: "/FeedBackly2.png",
     title: "FeedBackly",
     description:

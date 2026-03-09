@@ -164,7 +164,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Favourite */}
           <div
             ref={(el) => (cardsRef.current[3] = el)}
             className="rounded-2xl border border-white/10 p-6

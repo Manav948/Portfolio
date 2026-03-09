@@ -1,9 +1,8 @@
-"use client";
-
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import Hero from "../Hero";
 import About from "../About";
 import Connect from "../Connect";
+import Skills from "./Skills";
 
 const SPRING = {
   mass: 0.1,

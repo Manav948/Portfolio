@@ -3,12 +3,13 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Project from "./Project";
-import Slider from "../component/ui/Slider"
-import HeaderLink from "./Header";
+import Slider from "../component/ui/Slider";
+import TechGalaxy from "../component/ui/TechGalaxy";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const heroRef = useRef(null);
   const textItemsRef = useRef([]);
   const imageRef = useRef(null);
@@ -17,7 +18,7 @@ const Hero = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      // Text sequence
+      /* Text animation */
       tl.fromTo(
         textItemsRef.current,
         { y: 40, opacity: 0 },
@@ -29,34 +30,44 @@ const Hero = () => {
         }
       );
 
-      // Image animation
+      /* image start */
       tl.fromTo(
         imageRef.current,
-        { scale: 0.95, y: 30, opacity: 0 },
+        { scale: 0.92, y: 40, opacity: 0 },
         {
           scale: 1,
           y: 0,
           opacity: 1,
-          duration: 1.1,
+          duration: 1.2,
         },
-        "-=0.6"
+        "-=0.5"
       );
+
+      /* image loop */
+      gsap.to(imageRef.current, {
+        y: 12,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
     }, heroRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section
-      ref={heroRef}
-      className="relative min-h-screen overflow-hidden"
-    >
+    <section ref={heroRef} className="relative min-h-screen overflow-hidden">
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute left-24 top-40 h-105 w-105 rounded-full bg-cyan-500/25 blur-[120px]" />
+        <div className="absolute left-24 top-40 h-105 w-105 rounded-full bg-cyan-500/25 blur-[140px]" />
+        <div className="absolute right-20 bottom-20 h-105 w-105 rounded-full bg-purple-500/25 blur-[140px]" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl items-center gap-20 md:grid-cols-2">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[50px_50px]" />
+      <div className="relative mx-auto grid max-w-7xl items-center gap-20 px-6 py-32 md:grid-cols-2">
+
         <div className="space-y-8">
+
           <span
             ref={(el) => (textItemsRef.current[0] = el)}
             className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm text-[#9AA3B2] backdrop-blur opacity-0"
@@ -73,16 +84,16 @@ const Hero = () => {
               Manav Valani
             </span>
             <br className="hidden md:block" />
-            A Full-Stack Developer Building Modern Web Apps
+            Building Modern Web Experiences
           </h1>
 
           <p
             ref={(el) => (textItemsRef.current[2] = el)}
             className="max-w-xl text-lg leading-relaxed text-[#9AA3B2] opacity-0"
           >
-            I design and build modern web applications using MERN and
-            Next.js, focusing on clean architecture, smooth animations,
-            and scalable UI systems.
+            I build modern full-stack applications using MERN and Next.js.
+            My focus is performance, scalable architecture, and smooth UI
+            animations that elevate user experience.
           </p>
 
           <div
@@ -90,26 +101,19 @@ const Hero = () => {
             className="flex flex-wrap gap-4 pt-4 opacity-0"
           >
             <button
-              className="
-                rounded-xl bg-linear-to-r from-[#7C6CFF] to-[#22D3EE]
-                px-7 py-3 font-medium text-black
-                shadow-lg shadow-[#7C6CFF]/30
-                transition-all duration-300
-                hover:scale-105 hover:shadow-[#22D3EE]/40
-              "
+              className="rounded-xl bg-linear-to-r from-[#7C6CFF] to-[#22D3EE]
+              px-7 py-3 font-medium text-black shadow-lg shadow-[#7C6CFF]/30
+              transition-all duration-300 hover:scale-105 hover:shadow-[#22D3EE]/40"
               onClick={() => navigate("/projects")}
             >
               View Projects
             </button>
 
             <button
-              className="
-                rounded-xl border border-white/10
-                bg-white/5 px-7 py-3 text-[#EDEFF4]
-                backdrop-blur
-                transition-all duration-300
-                hover:border-[#22D3EE]/60 hover:text-[#22D3EE]
-              "
+              className="rounded-xl border border-white/10
+              bg-white/5 px-7 py-3 text-[#EDEFF4] backdrop-blur
+              transition-all duration-300
+              hover:border-[#22D3EE]/60 hover:text-[#22D3EE]"
             >
               Contact Me
             </button>
@@ -117,33 +121,34 @@ const Hero = () => {
         </div>
 
         <div className="relative flex justify-center">
+
           <div className="absolute inset-0 -z-10 rounded-3xl bg-linear-to-r from-[#7C6CFF]/30 to-[#22D3EE]/30 blur-3xl" />
 
           <div
             ref={imageRef}
-            className="
-              group relative overflow-hidden rounded-3xl
-              border border-white/10
-              bg-[#12151B]/80 backdrop-blur
-              p-2
-              shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]
-              opacity-0
-            "
+            className="group relative overflow-hidden rounded-3xl border border-white/10
+            bg-[#12151B]/80 backdrop-blur p-2
+            shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] opacity-0"
           >
             <img
               src="/Me2.jpg"
               alt="Manav Valani"
-              className="h-105 w-[320px] rounded-2xl object-cover"
+              className="h-105 w-[320px] rounded-2xl object-cover transition duration-500 group-hover:scale-105"
             />
           </div>
         </div>
       </div>
-      <div className="py-50">
+
+      <TechGalaxy />
+
+      <div className="py-40">
         <Project />
       </div>
-      <div className="py-30">
+
+      <div className="py-32">
         <Slider />
       </div>
+
     </section>
   );
 };

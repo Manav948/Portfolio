@@ -137,7 +137,7 @@ const About = () => {
                 { name: "GitHub", icon: "/github.png" },
                 { name: "Twitter", icon: "/twitter.png" },
                 { name: "Instagram", icon: "/i2.jpeg" },
-                { name: "Instagram", icon: "/i2.jpeg" },
+                { name: "LeetCode", icon: "/leetcode.svg" },
               ].map((item, i) => (
                 <li
                   key={item.name}
@@ -146,7 +146,7 @@ const About = () => {
                 >
                   <img
                     src={item.icon}
-                    className="h-6 w-6 rounded-md bg-white p-[2px]"
+                    className="h-10 w-10 rounded-md bg-white p-0.5"
                   />
                   {item.name}
                 </li>

@@ -97,7 +97,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Manav Valani. All rights reserved.
           </span>
           <span>
-            Built with ❤️ Manav Valani
+            Built with ❤️ by Manav Valani
           </span>
         </div>
       </div>

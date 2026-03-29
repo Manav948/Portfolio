@@ -17,6 +17,8 @@ import {
   SiNodedotjs,
   SiReact,
   SiShadcnui,
+  SiGsap,
+  SiSimpleicons,
 } from "react-icons/si";
 
 const techIcons = {
@@ -26,6 +28,8 @@ const techIcons = {
   Supabase: { icon: <SiSupabase />, gradient: "from-green-400 to-emerald-600" },
   PostGress: { icon: <SiPostgresql />, gradient: "from-blue-400 to-indigo-500" },
   MongoDB: { icon: <SiMongodb />, gradient: "from-green-500 to-lime-400" },
+  Gsap : {icon : <SiGsap /> , gradient : "from-green-500 to-lime-400"},
+  Lenis : {icon : <SiSimpleicons /> , gradient : "from-red-500 to-orange-500"},
   "React-tanstack-query": {
     icon: <SiReactquery />,
     gradient: "from-orange-400 to-red-500",
@@ -73,6 +77,20 @@ const projects = [
       "React-tanstack-query",
     ],
     link: "https://codeverse.manavvalani.in/",
+  },
+  {
+    img: "/devpulse.png",
+    title: "DevPulse",
+    description:
+      "DevPulse is a real-time API and website monitoring platform that helps developers track uptime, response time, failures, and performance of their APIs and services.",
+    tech: [
+      "Node",
+      "Express",
+      "MongoDB",
+      "React",
+      "Gsap",
+    ],
+    link: "https://dev-pulse-pi.vercel.app/",
   },
   {
     img: "/FeedBackly3.png",
@@ -204,7 +222,7 @@ const AllProject = () => {
                         <div key={i} className="relative group/tech">
                           <div
                             className={`absolute inset-0 rounded-full bg-linear-to-r ${item.gradient}
-                            opacity-0 blur-md transition duration-300 group-hover/tech:opacity-70`}
+                            opacity-0 blur-md transition duration-300 group-hover/tech:opacity-100`}
                           />
 
                           <div

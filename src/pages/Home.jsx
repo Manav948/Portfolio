@@ -9,7 +9,7 @@ const Home = () => {
     <ScrollView>
       <div className="min-h-screen bg-black text-[#EDEFF4] overflow-hidden">
         <Header />
-        <main className="pt-32">
+        <main>
           <div className="mx-auto max-w-7xl py-32">
             <MouseFollowCard />
           </div>

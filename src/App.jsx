@@ -4,10 +4,12 @@ import AllProject from "./pages/AllProject";
 import { Header } from "./component/Header";
 import "./App.css"
 import AboutMe from "./pages/AboutMe";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
 
       <Routes>

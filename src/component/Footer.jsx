@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SocialTooltip from "../component/ui/SocialTooltip";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -47,18 +48,18 @@ const Footer = () => {
             </h3>
 
             <div className="flex flex-col gap-2 text-sm text-[#9AA3B2]">
-              <a href="/" className="hover:text-white transition">
+              <Link to="/" className="hover:text-white transition">
                 Home
-              </a>
-              <a href="/projects" className="hover:text-white transition">
+              </Link>
+              <Link to="/projects" className="hover:text-white transition">
                 Projects
-              </a>
-              <a href="/about" className="hover:text-white transition">
+              </Link>
+              <Link to="/about" className="hover:text-white transition">
                 About
-              </a>
-              <a href="/contact" className="hover:text-white transition">
+              </Link>
+              <Link to="/about" className="hover:text-white transition">
                 Contact
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -88,7 +89,6 @@ const Footer = () => {
               Back to top ↑
             </button>
           </motion.div>
-
         </div>
 
         <div className="mt-16 h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent" />
@@ -96,9 +96,7 @@ const Footer = () => {
           <span>
             © {new Date().getFullYear()} Manav Valani. All rights reserved.
           </span>
-          <span>
-            Built with ❤️ by Manav Valani
-          </span>
+          <span>Built with ❤️ by Manav Valani</span>
         </div>
       </div>
     </footer>

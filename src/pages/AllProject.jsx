@@ -90,7 +90,7 @@ const projects = [
       "React",
       "Gsap",
     ],
-    link: "https://dev-pulse-pi.vercel.app/",
+    link: "https://devpulse.manavvalani.in",
   },
   {
     img: "/FeedBackly3.png",

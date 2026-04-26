@@ -13,24 +13,24 @@ const AboutMe = () => {
           <div className="absolute right-1/4 bottom-32 h-96 w-96 rounded-full bg-cyan-500/20 blur-[160px]" />
         </div>
 
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl">
 
           {/* Page Header */}
           <div className="mb-24 max-w-3xl">
-            <h1 className="text-4xl font-semibold tracking-tight">
+            <h1 className="text-4xl font-semibold tracking-tight px-6">
               About Me
             </h1>
-            <p className="mt-15 text-2xl text-semibold">
+            <p className="mt-15 text-2xl text-semibold px-6">
               Hii , I am Manav Valani
             </p>
-            <p className="mt-6 text-lg leading-relaxed text-[#9AA3B2]">
+            <p className="mt-6 text-lg leading-relaxed text-[#9AA3B2] px-6">
               I’m a full-stack web developer who enjoys building modern,
               performant, and visually refined web applications. I primarily
               work with React, Next.js, and the MERN stack, focusing on clean
               architecture, smooth interactions, and scalable UI systems.
             </p>
 
-            <p className="mt-4 text-lg leading-relaxed text-[#9AA3B2]">
+            <p className="mt-4 text-lg leading-relaxed text-[#9AA3B2] px-6">
               I enjoy turning complex ideas into simple, intuitive experiences
               and pay close attention to details—from motion and layout to
               performance and accessibility. I’m constantly learning and

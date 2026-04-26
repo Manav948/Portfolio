@@ -49,7 +49,7 @@ const Connect = () => {
       ref={sectionRef}
       className="relative bg-black py-28 md:py-40 text-white overflow-hidden"
     >
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-5xl px-3">
         <div className="relative mx-auto max-w-3xl rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl p-10 md:p-16 text-center shadow-[0_30px_80px_-40px_rgba(0,0,0,0.8)] overflow-hidden">
 
           <div className="pointer-events-none absolute inset-0 z-0">

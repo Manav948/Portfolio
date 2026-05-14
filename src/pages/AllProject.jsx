@@ -46,7 +46,7 @@ const techIcons = {
 
 const projects = [
   {
-    img: "/draftly.png",
+    img: "/draftlyv2.png",
     title: "Draftly",
     description:
       "A modern workspace for tasks, mind maps, and productivity-focused workflows.",

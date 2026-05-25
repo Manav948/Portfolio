@@ -81,7 +81,7 @@ const projects = [
     link: "https://feedbackly-seven.vercel.app/",
   },
   {
-    img: "/imegino.png",
+    img: "/imagino2.0.png",
     title: "Imagino",
     description:
       "AI image and logo generator that converts prompts into visuals.",

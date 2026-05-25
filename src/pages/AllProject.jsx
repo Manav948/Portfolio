@@ -93,20 +93,20 @@ const projects = [
     link: "https://devpulse.manavvalani.in",
   },
   {
+    img: "/imagino2.0.png",
+    title: "Imagino",
+    description:
+      "Imagino is an AI image & logo generator that allows users to create visuals using text prompts.",
+    tech: ["React", "Tailwind", "Framer Motion", "MongoDB", "Express", "Node"],
+    link: "https://imagino-dun.vercel.app",
+  },
+  {
     img: "/FeedBackly3.png",
     title: "FeedBackly",
     description:
       "A Next.js-based application allowing users to receive anonymous feedback via shareable links.",
     tech: ["Next.js", "Tailwind", "React", "Lenis", "MongoDB"],
     link: "https://feedbackly-seven.vercel.app/",
-  },
-  {
-    img: "/imegino.png",
-    title: "Imagino",
-    description:
-      "Imagino is an AI image & logo generator that allows users to create visuals using text prompts.",
-    tech: ["React", "Tailwind", "Framer Motion", "MongoDB", "Express", "Node"],
-    link: "https://imagino-dun.vercel.app",
   },
   {
     img: "/Assitant.png",
@@ -134,7 +134,7 @@ const projects = [
   },
   {
     img: "/ThinkBoard.png",
-    title: "Imagino",
+    title: "ThinkBoard",
     description:
       "ThinkBoard is a FullStack Application there use can create a Task and update and delete and maintain daily records",
     tech: ["React", "Tailwind", "MongoDB", "Express", "Node"],
@@ -142,7 +142,7 @@ const projects = [
   },
   {
     img: "/MovieHub.png",
-    title: "Imagino",
+    title: "MovieHub",
     description:
       "A Front-end MovieHub built using React and Vite. It allows users to browse, search, and view details about various movies.",
     tech: ["React", "Tailwind"],

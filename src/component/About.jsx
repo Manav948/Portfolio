@@ -133,22 +133,30 @@ const About = () => {
 
             <ul className="flex flex-col gap-6 text-sm">
               {[
-                { name: "LinkedIn", icon: "/linkdin.png" },
-                { name: "GitHub", icon: "/github.png" },
-                { name: "Twitter", icon: "/twitter.png" },
-                { name: "Instagram", icon: "/i2.jpeg" },
-                { name: "LeetCode", icon: "/leetcode.svg" },
+                { name: "LinkedIn", icon: "/linkdin.png", link: "https://www.linkedin.com/in/manavvalani/" },
+                { name: "GitHub", icon: "/github.png", link: "https://github.com/Manav948" },
+                { name: "Twitter", icon: "/twitter.png", link: "https://x.com/ManavValani" },
+                { name: "Instagram", icon: "/i2.jpeg", link: "https://www.instagram.com/" },
+                { name: "LeetCode", icon: "/leetcode.svg", link: "https://leetcode.com/u/manav_valani/" },
               ].map((item, i) => (
                 <li
                   key={item.name}
                   ref={(el) => (connectItemsRef.current[i] = el)}
                   className="flex items-center gap-3 opacity-0 transition hover:text-emerald-300"
                 >
-                  <img
-                    src={item.icon}
-                    className="h-10 w-10 rounded-md bg-white p-0.5"
-                  />
-                  {item.name}
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3"
+                  >
+                    <img
+                      src={item.icon}
+                      className="h-10 w-10 rounded-md bg-white p-0.5"
+                    />
+
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -178,7 +186,7 @@ const About = () => {
                   ref={(el) => (stackItemsRef.current[i] = el)}
                   className="relative group flex items-center justify-center opacity-0"
                 >
-          
+
                   <div className="absolute h-10 w-10 rounded-full bg-blue-500/50 blur-xl opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-150" />
 
                   <div className="relative flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur transition-all duration-300 group-hover:border-blue-400/40 group-hover:scale-110">

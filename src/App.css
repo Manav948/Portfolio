@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+/* Orbit animations */
+@keyframes orbit-clockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(var(--start-angle, 0deg)) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(var(--start-angle, 0deg)) rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter {
+  from {
+    transform: translate(-50%, -50%) rotate(var(--start-angle, 0deg)) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(var(--start-angle, 0deg)) rotate(0deg);
+  }
+}
+
+@keyframes counter-spin-clockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes counter-spin-counter {
+  from {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* Keyframes for the gradient border of the profile photo */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom animation pause styles when orbits are hovered */
+.orbit-paused .orbit-animate {
+  animation-play-state: paused !important;
+}
+
+/* Pulse animation for active status badge */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

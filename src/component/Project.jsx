@@ -73,12 +73,12 @@ const projects = [
     link: "https://codeverse.manavvalani.in/",
   },
   {
-    img: "/FeedBackly3.png",
+    img: "/FeedBacklyv.20.png",
     title: "FeedBackly",
     description:
       "Application that allows users to receive anonymous feedback using shareable links.",
     tech: ["Next.js", "Tailwind", "MongoDB"],
-    link: "https://feedbackly-seven.vercel.app/",
+    link: "https://feedbackly.manavvalani.in/",
   },
   {
     img: "/imagino2.0.png",

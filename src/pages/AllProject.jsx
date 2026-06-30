@@ -109,7 +109,7 @@ const projects = [
     link: "https://feedbackly.manavvalani.in/",
   },
   {
-    img: "/Assitant.png",
+    img: "/Assistant3.0.png",
     title: "AI-Assitant",
     description:
       "A full-stack AI-powered voice assistant built with React, Node.js, Express, and MongoDB. Features real-time speech recognition, wake word detection, and natural language responses using the Google Gemini API.",
